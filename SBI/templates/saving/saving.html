@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>saving page</title>
+    <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body  style="background:#6495ED">
+<center>
+<h1>Welcome to Saving Page</h1>
+<hr>
+ <div class="container1" >
+     <img src="{%static 'images/saving.jpg'%}" class="img2">
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+ </div>
+</center>
+<br><br><br>
+<p align="center">“It’s not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for.” — <b>Robert Kiyosaki</b></p>
+{% endblock %}
+</body>
+</html>

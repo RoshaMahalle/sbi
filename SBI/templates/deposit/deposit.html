@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit page</title>
+       <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body style="background:#00FFFF">
+
+<h1>Welocme to Deposie Page</h1>
+
+<hr>
+    <div class="container1" >
+
+      <img src="{%static 'images/deposit.jpg'%}" class="img2">
+
+
+    <form method="post">
+
+        {{form.as_p}}
+
+        {%csrf_token%}
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+    </form>
+
+</div>
+    <br><br><br>
+<p align="center">The psychology of women hitherto actually represents a deposit of the desires and disappointments of men. :
+    <b>Karen Horney</b></p>
+{% endblock %}
+</body>
+</html>

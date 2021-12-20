@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showdata</title>
+    <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body style="background:#f18973">
+
+
+<center>
+    <h1><i>Loan Info : Using Upper and Lower Case </i></h1>
+<table bgcolor="cyan" border="2">
+ {% for d in data %}
+    <tr bgcolor="yellow" >
+        <td>{{d.name | upper}}</td>
+        <td>{{d.address | lower }}</td>
+    </tr>
+ {%endfor%}
+</table>
+</center>
+{% endblock %}
+</body>
+</html>

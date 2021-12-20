@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>credit page</title>
+        <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body style="background:coral">
+<h1>Welcome to Credit Card Page</h1>
+<HR>
+
+ <div class="container1" >
+
+      <img src="{%static 'images/credit.png'%}" class="img2">
+
+
+    <form method="post">
+
+        {{form.as_p}}
+
+        {%csrf_token%}
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+    </form>
+
+</div>
+<br><br><br>
+<p align="center">"Credit card spending is about borrowing from future joy to make the present happy/ sensational.
+Card Debt is like paying a price for your past.
+Of course you pay the price for your past. That's what credit cards are about."
+― <b>Vineet Raj Kapoor</b></p>
+    <br><br>
+{% endblock %}
+</body>
+</html>

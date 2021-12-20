@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoanForm</title>
+    <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body style="background:#ddd">
+<marquee width="50%" direction="right" height="50%">
+    STATE BANK OF INDIA
+</marquee>
+    <h1>Welcome to Home Loan Page</h1>
+    <hr>
+<div class="container1" >
+
+      <img src="{%static 'images/loan.png'%}" class="img2">
+
+    <form method="post">
+
+        {{form.as_p}}
+        {%csrf_token%}
+
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+    </form>
+
+</div>
+    <br><br><br>
+    <h6>“I sincerely believe that banking establishments are more dangerous than standing armies, and that the principle of spending money to be paid by posterity, under the name of funding, is but swindling futurity on a large scale.”
+        ― <b>Thomas Jefferson</b></h6>
+
+    <marquee width="100%" direction="left" height="80%"  >
+    STATE BANK OF INDIA
+</marquee>
+
+{% endblock %}
+
+
+
+</body>
+
+</html>

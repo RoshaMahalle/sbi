@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'loan/base.html'%}
+{%block base_block%}
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{%static 'css/test.css'%}">
+</head>
+<body style="background:Gainsboro">
+<div class="container"  align="center">
+   <h1 class="s1"><b><i>My Account Login Form </i> </b></h1>
+</div>
+ <hr>
+<div class="container1" align="center">
+    <img src="{%static 'images/LOGIN.jpg'%}" class="img2">
+<form method="post">
+    <h1 align="center" >Login Here</h1>
+    {{form.as_p}}
+    {%csrf_token%}
+    <button type="submit">login</button>
+</form>
+    </div>
+
+{%endblock%}
+</body>
+</html>
